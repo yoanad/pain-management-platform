@@ -1,0 +1,70 @@
+.Onboarding__Step-Two {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+     background-color: #2aa97c;
+}
+
+.Onboarding__Step-Two .Crosses {
+    position: absolute;
+    top:0;
+}
+
+.Onboarding__Step-Two .Info-Text {
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 314px;
+    z-index: 2;
+}
+
+.Onboarding__Step-Two h3 {
+    margin-bottom: 0;
+    padding: 1em 1em 0 1em;
+    font-weight: lighter;
+    color: white;
+}
+
+.Onboarding__Step-Two .Info-Text span {
+    padding: 75vw 2em 1em 2em;
+    font-size: 24px;
+    line-height: 1;
+    z-index: 1;
+}
+
+.Onboarding__Step-Two .Wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Onboarding__Step-Two .Wave svg {
+    width: 100%;
+    height: 100%;
+}
+
+.Onboarding__Step-Two .Navigation {
+    display: flex;
+    z-index: 1;
+}
+
+.Onboarding__Step-Two .Navigation .Nav-Icon {
+    font-size: 18px;
+    color: #b3b3b3;
+}
+
+.Onboarding__Step-Two .Navigation .Nav-Icon-Arrow {
+    color: white;
+}
+
+.Onboarding__Step-Two .Navigation .Nav-Icon-Circle {
+}
+.Onboarding__Step-Two .Navigation .Nav-Icon--Active {
+    color: white;
+}

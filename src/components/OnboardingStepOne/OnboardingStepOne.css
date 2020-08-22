@@ -1,0 +1,64 @@
+.Onboarding__Step-One {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Onboarding__Step-One .Info-Text {
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 314px;
+}
+
+.Onboarding__Step-One h4 {
+    margin-bottom: 0;
+    padding: 0 2em 0 2em;
+}
+
+.Onboarding__Step-One h5 {
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+.Onboarding__Step-One .Info-Text span {
+    padding: 75vw 2em 1em 2em;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.Onboarding__Step-One .Layla {
+    position: absolute;
+    bottom: 200px;
+    width: 50vw;
+}
+
+.Onboarding__Step-One .Wave {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+.Onboarding__Step-One .Navigation {
+    display: flex;
+}
+
+.Onboarding__Step-One .Navigation .Nav-Icon {
+    font-size: 18px;
+    color: #b3b3b3;
+}
+
+.Onboarding__Step-One .Navigation .Nav-Icon-Arrow {
+    color: white;
+}
+
+.Onboarding__Step-One .Navigation .Nav-Icon-Circle {
+}
+.Onboarding__Step-One .Navigation .Nav-Icon--Active {
+    color: white;
+}

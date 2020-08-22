@@ -1,0 +1,74 @@
+.Onboarding__Step-Four {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffbc72;
+    justify-content: center;
+    align-items: center;
+}
+
+.Onboarding__Step-Four .DoctorPatient {
+  width: 196px;
+  height: 325px;
+}
+
+.Onboarding__Step-Four .Info-Text {
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 314px;
+    z-index: 2;
+    position: relative;
+}
+
+.Onboarding__Step-Four h3 {
+    margin-bottom: 1em;
+    padding: 0em 1em 0 1em;
+    font-weight: lighter;
+    color: #4a4a4a;
+    font-size:48px;
+}
+
+.Onboarding__Step-Four .Info-Text span {
+    padding: 0 2em 1em 2em;
+    font-size: 24px;
+    line-height: 1;
+    z-index: 1;
+}
+
+.Onboarding__Step-Four .Wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.Onboarding__Step-Two .Wave svg {
+    height: 314px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+}
+
+.Onboarding__Step-Four .Navigation {
+    display: flex;
+    z-index: 1;
+}
+
+.Onboarding__Step-Four .Navigation .Nav-Icon {
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+.Onboarding__Step-Four .Navigation .Nav-Icon-Arrow {
+    color:#4a4a4a;
+}
+
+.Onboarding__Step-Four .Navigation .Nav-Icon--Active {
+    color: white;
+}
