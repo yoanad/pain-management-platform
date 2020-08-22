@@ -1,47 +1,63 @@
-.Home .Search-Bar {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3em;
-    position: relative;
+.Home {
+
 }
 
-.Home .Search-Bar > * {
-    width: 100%;
+.Home .Layla-Avatar {
+    width: 181px;
+    height: 195px;
+    margin-top: 22px;
 }
 
-.Home .Search-Bar label {
-    margin-bottom: 1em;
-    border-radius: 4px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
+.Home a {
+    text-decoration: none;
 }
 
-.Home .Search-Bar input {
+.Home h3 {
+    font-weight: lighter;
+    margin: 10px 30px 1em 30px;
     color: #4a4a4a;
 }
 
-.Home .Search-Bar .Background {
-    background-size: cover;
-    background-image: url('../../assets/38530.jpg');
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
+.Home .NavItem {
+    max-height: 83px;
+    font-size: 24px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.Home .Search-Bar .Background::after {
-    content: "";
-    background-size: contain;
-    position: absolute;
-    background-color: rgba(74, 144, 226, 0.45);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    left: 0;
-    top: 0;
+.Home .NavItem p {
+    margin: 0;
+    line-height: 1;
 }
 
+.Home .NavItem i {
+    font-size: 40px;
+}
+
+.Home .NavItem-Specialist {
+    color: white;
+    background-color: #69b8e9;
+}
+
+.Home .NavItem-NoSpecialist {
+    color: #69b8e9;
+    border: solid 1px #69b8e9;
+}
+
+.Home .NavItem-Exercises {
+    color: white;
+    background-color: #8765bf;
+}
+
+.Home .NavItem-Meditation {
+    color: white;
+    background-color: #60c4a0;
+}
+
+.Home .NavItem-Symptoms {
+    color: white;
+    background-color: rgba(255, 188, 114, 0.98);
+}

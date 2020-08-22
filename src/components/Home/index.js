@@ -1,45 +1,63 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Button, TextField } from 'rmwc';
-import './Home.css'
-import Card from '../Card';
-import doctors from '../../services/doctors';
+import React, { useState, useCallback } from 'react';
+import layla_outlined from '../../assets/Layla_outlined.png';
+import { Typography } from '@rmwc/typography';
+import { Icon } from '@rmwc/icon';
+import { Link } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
-    const [specialtyFilter, setSpecialtyFilter] = useState("");
-    const [locationFilter, setLocationFilter] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [filteredItems, setFilteredItems] = useState([]);
-
-    const handleClick = useCallback(() => {
-        console.log(doctors)
-        setFilteredItems(
-            doctors.filter((doctor) =>
-                doctor.speciality.toLowerCase().includes(specialtyFilter.toLowerCase())
-                && doctor.location.toLowerCase().includes(locationFilter.toLowerCase())
-            )
-        );
-        console.log(specialtyFilter.toLowerCase(), doctors[0].speciality.toLowerCase());
-
-    }, [specialtyFilter, locationFilter]);
-
-    if (loading) {
-        return <p>Loading countries...</p>;
-    }
-
-
     return (
         <div className="Home">
-            <div className="Search-Bar">
-                <TextField icon="person_outline" label="Specialty" onChange={e => setSpecialtyFilter(e.target.value)} />
-                <TextField icon="location_on" label="Location" onChange={(e) => setLocationFilter(e.target.value)} />
-                <Button icon="search" label="Search" raised onClick={handleClick} />
-                <div className="Background"></div>
-            </div>
-            <div className="Results">
-                {filteredItems.map((d, i) => <Card key={i} name={d.name} speciality={d.speciality} location={d.location} description={d.description} avatarUrl={d.avatarUrl} />)}
-            </div>
+            <img className="Layla-Avatar" src={layla_outlined} alt="Layla avatar" />
+            <Typography use="headline3" tag="h3">
+                Hi, I’m Layla, your adviser. <br />
+                <b>How can I help?</b>
+            </Typography>
+            <Link to="/search">
+                <div className="NavItem NavItem-Specialist">
+                    <p>
+                        I know what specialist
+                        I’m looking for
+                    </p>
+                    <Icon icon="keyboard_arrow_right" />
+                </div>
+            </Link>
+            <Link>
+                <div className="NavItem NavItem-NoSpecialist">
+                    <p>
+                        I don’t know what specialist
+                        I’m looking for.
+                    </p>
+                    <Icon icon="keyboard_arrow_right" />
+                </div>
+            </Link>
+            <Link>
+                <div className="NavItem NavItem-Exercises">
+                    <p>
+                        I’m looking for excercises
+                        for pain.
+                    </p>
+                    <Icon icon="keyboard_arrow_right" />
+                </div>
+            </Link>
+            <Link>
+                <div className="NavItem NavItem-Meditation">
+                    <p>
+                        I’m looking for meditation for pain.
+                    </p>
+                    <Icon icon="keyboard_arrow_right" />
+                </div>
+            </Link>
+            <Link>
+                <div className="NavItem NavItem-Symptoms">
+                    <p>
+                        I want to log my symptoms.
+                    </p>
+                    <Icon icon="keyboard_arrow_right" />
+                </div>
+            </Link>
         </div>
-    )
+    );
 }
 
 export default Home;
