@@ -1,30 +1,42 @@
-import React from 'react';
-// import { Typography } from '@rmwc/typography';
-// import { Icon } from '@rmwc/icon';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button, TextField } from 'rmwc';
 import './Home.css'
 import Card from '../Card';
 import doctors from '../../services/doctors';
 
 const Home = () => {
+    const [specialtyFilter, setSpecialtyFilter] = useState("");
+    const [locationFilter, setLocationFilter] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [filteredItems, setFilteredItems] = useState([]);
 
-    // const Results = () => {
-    //     doctors.forEach((el, i) => {
+    const handleClick = useCallback(() => {
+        console.log(doctors)
+        setFilteredItems(
+            doctors.filter((doctor) =>
+                doctor.speciality.toLowerCase().includes(specialtyFilter.toLowerCase())
+                && doctor.location.toLowerCase().includes(locationFilter.toLowerCase())
+            )
+        );
+        console.log(specialtyFilter.toLowerCase(), doctors[0].speciality.toLowerCase());
 
-    //     });
-    // }
+    }, [specialtyFilter, locationFilter]);
+
+    if (loading) {
+        return <p>Loading countries...</p>;
+    }
+
 
     return (
         <div className="Home">
             <div className="Search-Bar">
-                <TextField icon="person_outline" label="Physiotherapist" />
-                <TextField icon="location_on" label="Edinburgh" />
-                <Button icon="search" label="Search" raised />
+                <TextField icon="person_outline" label="Specialty" onChange={e => setSpecialtyFilter(e.target.value)} />
+                <TextField icon="location_on" label="Location" onChange={(e) => setLocationFilter(e.target.value)} />
+                <Button icon="search" label="Search" raised onClick={handleClick} />
                 <div className="Background"></div>
             </div>
             <div className="Results">
-                {/* <Results /> */}
-                {doctors.map((d, i) => <Card key={i} name={d.name} specialty={d.specialty} location={d.location} description={d.description} avatarUrl={d.avatarUrl} />)}
+                {filteredItems.map((d, i) => <Card key={i} name={d.name} speciality={d.speciality} location={d.location} description={d.description} avatarUrl={d.avatarUrl} />)}
             </div>
         </div>
     )

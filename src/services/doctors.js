@@ -6,21 +6,21 @@ const Doctors =
     [
         {
             name: "Michelle Tucker",
-            location: "EH7 4AG",
+            location: "Edinburgh",
             speciality: "Physiotherapist",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
             avatarUrl: avatarUrl1
         },
         {
             name: "Harry Ray",
-            location: "EH8 9PT",
+            location: "Edinburgh",
             speciality: "Chiropractor",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
             avatarUrl: avatarUrl2
         },
         {
             name: "Harry Ray",
-            location: "EH8 9PT",
+            location: "Glasgow",
             speciality: "Masseur",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
             avatarUrl: avatarUrl3
