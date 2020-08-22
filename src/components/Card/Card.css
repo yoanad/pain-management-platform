@@ -1,0 +1,83 @@
+.Card {
+    margin: 1em;
+}
+
+.Card .Elevation {
+    border-radius: 4px;;
+}
+
+.Card .Card__Content {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Card  .Card__Content > * {
+    width: 100%;
+}
+
+.Card .Card__Content .Name {
+font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+  margin:0;
+}
+
+.Card .Card__Content .Specialty,
+.Card .Card__Content .Description {
+    font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.6);
+    margin:0;
+}
+
+.Card .Card__Content .Location {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: #9b9b9b;
+  display: flex;
+    align-items: center;
+}
+
+.Card .Card__Content .Location i {
+    font-size: 17px;
+}
+
+
+.Card  .Card__Content .Row-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Card  .Card__Content .Row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card  .Card__Content .Row-2 > * {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.Card  .Card__Content .Row-2 .Content__Right {
+    text-align: left;
+    padding: 5px;
+}
+
+.Card .Card__Content .Row-2 img { 
+    width: 117px;
+    height: 117px;
+}
+

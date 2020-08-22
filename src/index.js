@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Route, Switch, Redirect, IndexRoute } from 'react-router-dom';
-import Onboarding from './components/Onboarding';
-import Home from './components/Home';
 import 'rmwc/dist/styles';
 import '@rmwc/icon/styles'
 import './index.css';
