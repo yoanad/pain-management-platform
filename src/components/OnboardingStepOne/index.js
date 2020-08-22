@@ -4,7 +4,6 @@ import { Icon } from '@rmwc/icon';
 import { Link } from 'react-router-dom';
 import Wave from '../Wave';
 import layla from '../../assets/Layla.svg';
-import wave from '../../assets/wave.svg';
 import './OnboardingStepOne.css';
 
 const OnboardingStepOne = () => {
