@@ -15,11 +15,11 @@ const Search = () => {
     const handleClick = useCallback(() => {
         setFilteredItems(
             doctors.filter((doctor) =>
-                (specialtyFilter.toLowerCase().length !== 0 && locationFilter.toLowerCase().length !== 0)
-                && doctor.speciality.toLowerCase().includes(specialtyFilter.toLowerCase())
+                doctor.speciality.toLowerCase().includes(specialtyFilter.toLowerCase())
                 && doctor.location.toLowerCase().includes(locationFilter.toLowerCase())
             )
         );
+        // (specialtyFilter.toLowerCase().length !== 0 && locationFilter.toLowerCase().length !== 0)
         setSearched(true);
 
     }, [specialtyFilter, locationFilter]);

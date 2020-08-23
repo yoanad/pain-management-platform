@@ -2,26 +2,55 @@
     position: fixed;
     bottom: 0;
     max-width: 100%;
-    box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+    /* box-shadow: 0px 10px 5px #888, 0px -10px 5px #888; */
     height: 90px;
-}
-
-.BottomNavigation__List {
+    background-color: #a9a9a9;
+    background-color: #a9a9a9;
+    height: 48px;
+    width: 100%;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #a9a9a9;
+    overflow: visible;
 }
 
-.BottomNavigation__Item {
-    color: #b1b1b1;
+.BottomNavigation__List {
+    display: flex;
+    justify-content: space-around;
 }
 
-.BottomNavigation__Item a {
+.BottomNavigation__List  .mdc-tab-scroller__scroll-area--scroll,
+.BottomNavigation__List .mdc-tab-scroller {
+    overflow: visible;
+    width: 100%;
+}
+
+button.BottomNavigation__Item {
+    color: #dcdcdc;
+    padding: 0 16px;
+}
+
+.BottomNavigation__Item-Layla.mdc-tab .mdc-tab__text-label {
+    opacity: 1 !important;
+}
+
+.BottomNavigation__List .mdc-tab--active .mdc-tab__text-label {
     text-decoration:  none;
-        color: #dcdcdc;
+    color: #dcdcdc;
 }
 
-.BottomNavigation__Item.mdc-tab--active .mdc-tab__text-label a{
-    color: white;
+.BottomNavigation__Item-Layla.mdc-tab {
+    position: absolute;
+    bottom: 38px;
+    left: calc(50% - 50px);
+    z-index: 9999;
+}
+
+.BottomNavigation__Item-Layla img {
+    width: 57px;
+    height: 62px;
+}
+
+.BottomNavigation__Item-Layla .mdc-tab-indicator--active .mdc-tab-indicator__content {
+    opacity: 0;
 }
