@@ -41,7 +41,7 @@ button.BottomNavigation__Item {
 
 .BottomNavigation__Item-Layla.mdc-tab {
     position: absolute;
-    bottom: 38px;
+    bottom: 30px;
     left: calc(50% - 50px);
     z-index: 9999;
 }

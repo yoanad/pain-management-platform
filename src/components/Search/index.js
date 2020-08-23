@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Button, TextField, CircularProgress, Typography } from 'rmwc';
 import './Search.css'
 import Card from '../Card';
@@ -30,7 +30,7 @@ const Search = () => {
                 <img className="Layla-Outlined" src={layla_outlined} alt="avatar" />
                 <Typography use="headline3" tag="h3">
                     Welcome!
-                    </Typography>
+                </Typography>
                 <Typography use="headline4" tag="h4">
                     Try searching for specialist area and location.
                     </Typography>

@@ -1,15 +1,15 @@
 /* eslint-disable no-duplicate-case */
 import React from 'react';
 import { TabBar, Tab, Elevation } from 'rmwc';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './BottomNavigation.css';
 import layla_outlined from '../../assets/Layla_outlined_white_bg.png';
 
 const BottomNavigation = () => {
-    const history = useHistory();
+    const [activeTab, setActiveTab] = React.useState(-1);
 
+    const history = useHistory();
     const onActivate = (e) => {
-        console.log(e.target.index);
         const val = e.target.index;
         switch (val) {
             case 0:
@@ -28,14 +28,14 @@ const BottomNavigation = () => {
                 history.push("/records");
                 break;
             default:
-            // code block
         }
 
     }
+
     return (
         <Elevation z={2}>
             <div className="BottomNavigation">
-                <TabBar className="BottomNavigation__List" activeTabIndex={0} onActivate={onActivate}>
+                <TabBar className="BottomNavigation__List" activeTabIndex={activeTab} onActivate={onActivate}>
                     <Tab className="BottomNavigation__Item">Search</Tab>
                     <Tab className="BottomNavigation__Item">Body</Tab>
                     <Tab className="BottomNavigation__Item-Layla">
