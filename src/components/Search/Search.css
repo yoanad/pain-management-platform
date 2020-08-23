@@ -1,3 +1,6 @@
+.Search {
+    color: #4a4a4a;
+}
 .Search .Search-Bar {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +15,6 @@
 .Search .Search-Bar label {
     margin-bottom: 1em;
     border-radius: 4px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
 }
 
 .Search .Search-Bar input {
@@ -45,3 +47,22 @@
     top: 0;
 }
 
+.Search .No-Results {
+    margin: 0 2em 0 2em;
+}
+
+.Search .No-Results .Layla-Outlined {
+  width: 122px;
+  height: 131px;
+  margin-top: 2em;
+}
+
+.Search .No-Results h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.Search .No-Results h4 {
+    margin-top: 10px;
+    font-weight: lighter;
+}

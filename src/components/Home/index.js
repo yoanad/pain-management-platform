@@ -22,7 +22,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link>
+            <Link to="assessment-specialist">
                 <div className="NavItem NavItem-NoSpecialist">
                     <p>
                         I don’t know what specialist
@@ -31,7 +31,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link>
+            <Link to="assessment-body">
                 <div className="NavItem NavItem-Exercises">
                     <p>
                         I’m looking for excercises
@@ -40,7 +40,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link>
+            <Link to="assessment-mind">
                 <div className="NavItem NavItem-Meditation">
                     <p>
                         I’m looking for meditation for pain.
@@ -48,7 +48,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link>
+            <Link to="log-symptoms">
                 <div className="NavItem NavItem-Symptoms">
                     <p>
                         I want to log my symptoms.
