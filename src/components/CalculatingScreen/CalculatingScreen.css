@@ -1,7 +1,7 @@
 .CalculatingScreen {
     color: #4a4a4a;
     font-weight: lighter;
-    margin: 3em;
+    margin: 2em;
     display: flex;
     justify-content: center;
     flex-direction: column;

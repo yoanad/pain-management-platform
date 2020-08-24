@@ -1,38 +1,13 @@
 import React from 'react';
 import { Button, Select, Typography, List, ListItem, Checkbox, ListItemMeta, Elevation } from 'rmwc';
-import { Link } from 'react-router-dom';
+import CalculatingScreen from '../CalculatingScreen';
+import Recommendation from '../Recommendation';
+import { Link, Route } from 'react-router-dom';
 import layla from '../../assets/Layla.svg';
 import body from '../../assets/body.svg';
-import './AssessmentSpecialist.css'
+import './Assessment.css'
 import serviceOptions from '../../services/serviceOptions.js';
 import { useHistory } from 'react-router-dom';
-
-const AssessmentStep1 = () => {
-    const onButtonClick = () => {
-    };
-    return (
-        <div>
-            <div className="Assessment-Specialist__Intro">
-                <Typography use="headline5" tag="h5">
-                    Sorry to hear you are in pain.<br />
-                    <b>Don’t worry, I’m here to help.</b>
-                </Typography>
-                <img className="Layla-Outlined" src={layla} alt="avatar" />
-            </div>
-            <Select
-                className="Select"
-                enhanced
-                placeholder="Where does it hurt?"
-                options={['Cookies', 'Pizza', 'Icecream']}
-            />
-            <img className="Body" src={body} alt="avatar" />
-            <Link to="step2">
-                <Button raised label="Next" onClick={onButtonClick} />
-            </Link>
-        </div>
-
-    );
-}
 
 const AssessmentStep2 = () => {
     const [checked, setChecked] = React.useState({});
@@ -41,7 +16,7 @@ const AssessmentStep2 = () => {
 
     const onButtonClick = (e) => {
 
-        history.push("/calculating");
+        history.push("/assessment/calculating");
 
         const categories = [];
 
@@ -80,8 +55,8 @@ const AssessmentStep2 = () => {
     }
 
     return (
-        <div>
-            <div className="Assessment-Specialist__Intro">
+        <div className="Assessment">
+            <div className="Assessment__Intro">
                 <Typography use="headline5" tag="h5">
                     <b>Ok, can you describe the problem to me?</b><br />
                         Please choose any that apply.
@@ -112,14 +87,4 @@ const AssessmentStep2 = () => {
     );
 }
 
-const AssessmentSpecialist = () => {
-
-    return (
-        <div className="Assessment-Specialist">
-            {/* <AssessmentStep1 /> */}
-            <AssessmentStep2 />
-        </div>
-    );
-};
-
-export default AssessmentSpecialist;
+export default AssessmentStep2;

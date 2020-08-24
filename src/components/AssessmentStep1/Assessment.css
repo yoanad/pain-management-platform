@@ -1,0 +1,62 @@
+.Assessment {
+    margin: 3em;
+    color: #4a4a4a;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;  
+}
+
+.Assessment__Intro {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.Assessment__Intro h5 {
+    line-height: 1;
+    font-weight: lighter;
+    text-align: left;
+    margin: 0;
+}
+
+.Assessment b {
+    font-weight: normal;
+}
+
+.Assessment__Intro img {
+    align-self: center;
+    height: 100px;
+}
+
+.Assessment .Body {
+    margin: 30px 15px;  
+}
+
+
+.Assessment .Select .mdc-select__menu {
+    width: 100%;
+}
+
+.Assessment .List {
+    margin-bottom: 15px;
+}
+
+.Assessment .ListItem {
+    height: auto;
+    margin: 5px 10px 5px 10px;
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.Assessment .ListItem:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.Assessment a {
+    text-decoration: none;
+}
+
+.Assessment button {
+    width: 100%;
+}

@@ -22,7 +22,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link to="assessment-specialist">
+            <Link to="assessment">
                 <div className="NavItem NavItem-NoSpecialist">
                     <p>
                         I don’t know what specialist

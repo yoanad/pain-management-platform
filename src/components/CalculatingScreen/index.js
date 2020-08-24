@@ -8,7 +8,7 @@ const CalculatingScreen = () => {
     const history = useHistory();
 
     setTimeout(() => {
-        history.push("/recommendation");
+        history.push("/assessment/recommendation");
     }, 3000);
 
     return (
