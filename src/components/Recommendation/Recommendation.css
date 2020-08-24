@@ -1,0 +1,18 @@
+.Recommendation {
+    color: #4a4a4a;
+    font-weight: lighter;
+    margin: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.Recommendation img {
+    align-self: center;
+}
+
+.Recommendation h1 {
+    font-size: 36px;
+}

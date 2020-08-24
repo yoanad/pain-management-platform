@@ -1,0 +1,67 @@
+.Assessment-Specialist {
+    margin: 3em;
+    color: #4a4a4a;
+  display: flex; /* ADDED */
+  flex-flow: column nowrap;
+  justify-content: space-evenly;  
+}
+
+.Assessment-Specialist > * {
+    /* width: 100%;
+        flex: 1;     */
+}
+
+.Assessment-Specialist__Intro {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.Assessment-Specialist__Intro h5 {
+    line-height: 1;
+    font-weight: lighter;
+    text-align: left;
+    margin: 0;
+}
+
+.Assessment-Specialist b {
+    font-weight: normal;
+}
+
+.Assessment-Specialist__Intro img {
+    align-self: center;
+    height: 100px;
+}
+
+.Assessment-Specialist .Body {
+    margin: 30px 15px;  
+}
+
+
+.Assessment-Specialist .Select .mdc-select__menu {
+    width: 100%;
+}
+
+.Assessment-Specialist .List {
+    margin-bottom: 15px;
+}
+
+.Assessment-Specialist .ListItem {
+    height: auto;
+    margin: 5px 10px 5px 10px;
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.Assessment-Specialist .ListItem:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.Assessment-Specialist a {
+    text-decoration: none;
+}
+
+.Assessment-Specialist button {
+    width: 100%;
+}
