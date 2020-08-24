@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import Onboarding from './components/Onboarding';
 import Search from './components/Search';
@@ -12,7 +12,6 @@ import BottomNavigation from './components/BottomNavigation';
 import './App.css';
 
 const App = () => {
-
   return (
     <div className="App">
       <Onboarding />

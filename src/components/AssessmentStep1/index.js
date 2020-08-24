@@ -1,20 +1,26 @@
-import React from 'react';
-import { Button, Select, Typography, List, ListItem, Checkbox, ListItemMeta, Elevation } from 'rmwc';
-import CalculatingScreen from '../CalculatingScreen';
-import Recommendation from '..//Recommendation';
-import { Link, Route, Redirect } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Button, Select, Typography, FormField } from 'rmwc';
 import layla from '../../assets/Layla.svg';
 import body from '../../assets/body.svg';
 import './Assessment.css'
-import serviceOptions from '../../services/serviceOptions.js';
 import { useHistory, withRouter } from 'react-router-dom';
 
-const AssessmentStep1 = () => {
+const AssessmentStep1 = (props) => {
     const history = useHistory();
+    const [mainProblem, setMainProblem] = useState('');
+    const [invalid, setInvalid] = useState(false);
 
-    const onButtonClick = () => {
-        history.push('/assessment/step2')
+    const onButtonClick = (e) => {
+        if (mainProblem.length === 0) {
+            setInvalid(true);
+        } else {
+            history.push('/assessment/step2');
+        }
     }
+
+    useEffect(() => {
+        localStorage.setItem('mainProblem', mainProblem);
+    }, [mainProblem]);
 
     return (
         <div className="Assessment">
@@ -25,14 +31,19 @@ const AssessmentStep1 = () => {
                 </Typography>
                 <img className="Layla-Outlined" src={layla} alt="avatar" />
             </div>
-            <Select
-                className="Select"
-                enhanced
-                placeholder="Where does it hurt?"
-                options={['Headache', 'Neck pain', 'Shoulder pain', 'Lower back pain']}
-            />
-            <img className="Body" src={body} alt="avatar" />
-            <Button raised label="Next" onClick={onButtonClick} />
+            <form>
+                <Select
+                    className="Select"
+                    enhanced
+                    required
+                    invalid={invalid}
+                    placeholder="Where does it hurt?"
+                    onChange={(evt) => setMainProblem(evt.currentTarget.value)}
+                    options={['Headache', 'Neck pain', 'Shoulder pain', 'Lower back pain', 'Other']}
+                />
+                <img className="Body" src={body} alt="avatar" />
+                <Button raised label="Next" onClick={onButtonClick} />
+            </form>
         </div>
 
     );

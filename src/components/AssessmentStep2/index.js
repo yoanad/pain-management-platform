@@ -1,8 +1,5 @@
-import React from 'react';
-import { Button, Select, Typography, List, ListItem, Checkbox, ListItemMeta, Elevation } from 'rmwc';
-import CalculatingScreen from '../CalculatingScreen';
-import Recommendation from '../Recommendation';
-import { Link, Route } from 'react-router-dom';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Button, Typography, List, ListItem, Checkbox, ListItemMeta, Elevation } from 'rmwc';
 import layla from '../../assets/Layla.svg';
 import body from '../../assets/body.svg';
 import './Assessment.css'
@@ -10,14 +7,29 @@ import serviceOptions from '../../services/serviceOptions.js';
 import { useHistory } from 'react-router-dom';
 
 const AssessmentStep2 = () => {
-    const [checked, setChecked] = React.useState({});
-    const [options, setOptions] = React.useState(serviceOptions);
+    const [checked, setChecked] = useState({});
+    const [options, setOptions] = useState(serviceOptions);
+    const [recommendedSpecialist, setRecommendedSpecialist] = useState('');
     const history = useHistory();
 
+    useEffect(() => {
+        if (recommendedSpecialist === 1) {
+            localStorage.setItem('recommendedSpecialist', "Massage");
+        } else if (recommendedSpecialist === 2) {
+            localStorage.setItem('recommendedSpecialist', "Physiotherapy");
+        } else {
+            localStorage.setItem('recommendedSpecialist', "Unknown");
+        }
+    }, [recommendedSpecialist]);
+
     const onButtonClick = (e) => {
+        calculateCategory();
+        setTimeout(() => {
+            history.push("/assessment/calculating");
+        }, 500)
+    }
 
-        history.push("/assessment/calculating");
-
+    const calculateCategory = () => {
         const categories = [];
 
         //get categories of all selected items 
@@ -52,6 +64,7 @@ const AssessmentStep2 = () => {
         });
 
         console.log("predicted cat", predictedCat);
+        setRecommendedSpecialist(predictedCat);
     }
 
     return (
