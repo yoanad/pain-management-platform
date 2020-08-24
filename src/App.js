@@ -9,6 +9,8 @@ import AssessmentStep2 from './components/AssessmentStep2';
 import CalculatingScreen from './components/CalculatingScreen';
 import Recommendation from './components/Recommendation';
 import BottomNavigation from './components/BottomNavigation';
+import Body from './components/Body';
+import Mind from './components/Mind';
 import './App.css';
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
       <Route exact path={'/assessment/recommendation'} component={Recommendation} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/search" component={Search} />
+      <Route exact path="/body" component={Body} />
+      <Route exact path="/mind" component={Mind} />
       <BottomNavigation />
     </div>
   );

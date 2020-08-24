@@ -1,0 +1,57 @@
+.Body {
+    margin: 2em;
+}
+
+.Body h4 {
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.Video-List {
+    width: auto;
+    height: 160px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.Video-Item {
+}
+
+.Video-Item .Video-Thumbnail{
+    width: 160px;
+    height: 90px;
+}
+
+.Video-Item .Video-Title {
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  text-align: left;
+  margin: 5px 0px;
+}
+
+.Elevation-Video {
+    margin-right: 10px;
+    width: 160px;
+    height: 90px;
+    margin-right: 10px;
+    white-space: normal;
+    cursor: pointer;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    vertical-align:top;
+    display: inline-block;
+}
