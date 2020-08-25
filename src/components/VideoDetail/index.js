@@ -1,43 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, DialogButton } from 'rmwc';
+import YouTube from 'react-youtube';
 
 export const VideoDetail = ({ video }) => {
-    const [open, setOpen] = useState(true);
-    // const [videoSrc, setVideoSrc] = useState('');
-
-    // if (!video) {
-    //     setOpen(false);
-    //     return "Your video will apear here."
-    // } else {
-    //     setVideoSrc(`https://www.youtube.com/embed/${video.id.videoId}`);
-    //     setOpen(true);
-    // }
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+    const [_open, _setOpen] = useState(true);
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 1,
+        },
+    }
 
     return (
         <div className="Video-Detail">
-            <Dialog
-                open={open}
-                onClose={evt => {
-                    setOpen(false);
-                }}
-                onClosed={evt => console.log(evt.detail.action)}
-            >
-                <DialogTitle>{video.snippet.title}</DialogTitle>
-                <DialogContent>
-                    <div className="Video-Thumbnail">
-                        <iframe src={videoSrc} allowFullScreen title='Video player' />
-                    </div>
-                    <div className=''>
-                        <h4 className="Video-Title">{video.snippet.title}</h4>
-                        <p>{video.snippet.description}</p>
-                    </div>
-
-                </DialogContent>
-                <DialogActions>
-                    <DialogButton action="close">Cancel</DialogButton>
-                </DialogActions>
-            </Dialog>
+            <div className="Video-Thumbnail">
+                <YouTube
+                    videoId={video.id.videoId}
+                    opts={opts}
+                />
+            </div>
+            <div className=''>
+                <h4 className="Video-Title">{video.snippet.title}</h4>
+                <p>{video.snippet.description}</p>
+            </div>
         </div>
     );
 };

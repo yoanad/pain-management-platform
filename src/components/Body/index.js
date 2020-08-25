@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import youtube from '../../services/youtube';
 import './Body.css';
 import { VideoDetail } from '../VideoDetail';
@@ -9,6 +9,8 @@ const Body = () => {
     const [physioVideos, setPhysioVideos] = useState([]);
     const [yogaVideos, setYogaVideos] = useState([]);
     const [selectedVideo, setSelectedVideo] = useState(null);
+    const [showDialog, setShowDialog] = useState(false);
+
     let query;
     const problem = localStorage.getItem('mainProblem');
 
@@ -53,7 +55,7 @@ const Body = () => {
     return (
         <div className="Body">
             <div className="Video--Selected">
-                {selectedVideo && <VideoDetail video={selectedVideo} />}
+                {selectedVideo && <VideoDetail video={selectedVideo} open={showDialog} />}
             </div>
             <div className="Exercises">
                 {problem ? <h4>Exercises for {problem} </h4> : <h4>Exercises</h4>}
