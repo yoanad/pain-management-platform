@@ -1,0 +1,38 @@
+.RecordsAdd {
+    text-align: left;
+    margin: 2em;
+    color: #4a4a4a;
+}
+
+.Record .Elevation {
+    padding: 1em;
+}
+
+.RecordsAdd h1 {
+    color: #4a4a4a;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.Record h2 {
+    font-size: 16px;
+    margin:0;
+    font-weight: normal;
+}
+
+.Record h3 {
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: lighter;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.RecordsAdd button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.RecordsAdd .Item {
+    margin-bottom: 10px;
+}

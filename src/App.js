@@ -11,6 +11,8 @@ import Recommendation from './components/Recommendation';
 import BottomNavigation from './components/BottomNavigation';
 import Body from './components/Body';
 import Mind from './components/Mind';
+import Records from './components/Records';
+import RecordsAdd from './components/RecordsAdd';
 import './App.css';
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
       <Route exact path="/search" component={Search} />
       <Route exact path="/body" component={Body} />
       <Route exact path="/mind" component={Mind} />
+      <Route exact path="/records" component={Records} />
+      <Route exact path="/records/add" component={RecordsAdd} />
       <BottomNavigation />
     </div>
   );

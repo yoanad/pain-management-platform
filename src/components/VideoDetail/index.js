@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, DialogButton } from 'rmwc';
 import YouTube from 'react-youtube';
 
