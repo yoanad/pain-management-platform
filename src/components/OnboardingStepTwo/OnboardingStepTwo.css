@@ -3,7 +3,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-     background-color: #2aa97c;
+    background-color: #2aa97c;
+    background-image: url('../../assets/wave_green.svg');
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-size: auto;
+    background-position: center 100%;
 }
 
 .Onboarding__Step-Two .Crosses {
@@ -14,7 +19,7 @@
 .Onboarding__Step-Two .Info-Text {
     height: 314px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     flex-direction: column;
@@ -31,7 +36,7 @@
 }
 
 .Onboarding__Step-Two .Info-Text span {
-    padding: 75vw 2em 1em 2em;
+    padding: 2em 1em 2em;
     font-size: 24px;
     line-height: 1;
     z-index: 1;
@@ -52,6 +57,7 @@
 .Onboarding__Step-Two .Navigation {
     display: flex;
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .Onboarding__Step-Two .Navigation .Nav-Icon {

@@ -18,7 +18,7 @@ const OnboardingStepThree = () => {
                 <Typography use="body">
                     Have a look at the Body and Mind sections! There you will find curated excercises and meditations.
                 </Typography>
-                <Wave fillColor="#b086f6" />
+                {/* <Wave fillColor="#b086f6" /> */}
                 <div className="Navigation">
                     <Link to="/StepTwo">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_left" />

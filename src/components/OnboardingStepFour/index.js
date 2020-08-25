@@ -18,7 +18,6 @@ const OnboardingStepFour = () => {
                 <Typography use="body">
                     You can conviniently log your symptoms and share them with your treating specialist.
                 </Typography>
-                <Wave fillColor="#ffc98e" />
                 <div className="Navigation">
                     <Link to="/stepThree">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_left" />

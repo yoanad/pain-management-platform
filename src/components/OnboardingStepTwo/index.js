@@ -19,7 +19,7 @@ const OnboardingStepTwo = () => {
                 <Typography use="body">
                     You can directly search for services like massage, physiotherapy, chiropractic, etc and book.
                 </Typography>
-                <Wave fillColor="#60c4a0" />
+                {/* <Wave fillColor="#60c4a0" /> */}
                 <div className="Navigation">
                     <Link to="/StepOne">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_left" />

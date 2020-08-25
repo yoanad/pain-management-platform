@@ -6,6 +6,11 @@
     background-color: #ffbc72;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/wave_orange.svg');
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-size: auto;
+    background-position: center 100%;
 }
 
 .Onboarding__Step-Four .DoctorPatient {
@@ -16,7 +21,7 @@
 .Onboarding__Step-Four .Info-Text {
     height: 314px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: #4a4a4a;
     flex-direction: column;
@@ -31,11 +36,12 @@
     padding: 0em 1em 0 1em;
     font-weight: lighter;
     color: #4a4a4a;
-    font-size:48px;
+    font-size: 48px;
+    margin-top: 15px;
 }
 
 .Onboarding__Step-Four .Info-Text span {
-    padding: 0 2em 1em 2em;
+    padding: 2em 1em 2em;
     font-size: 24px;
     line-height: 1;
     z-index: 1;
@@ -58,6 +64,7 @@
 .Onboarding__Step-Four .Navigation {
     display: flex;
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .Onboarding__Step-Four .Navigation .Nav-Icon {

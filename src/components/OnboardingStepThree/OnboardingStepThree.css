@@ -6,17 +6,22 @@
     background-color: #8765bf;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/wave_purple.svg');
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-size: auto;
+    background-position: center 100%;
 }
 
 .Onboarding__Step-Three .Man-With-Ball {
-    width: 275px;
-    height: 251px;
+    width: auto;
+    height: 200px;
 }
 
 .Onboarding__Step-Three .Info-Text {
     height: 314px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     flex-direction: column;
@@ -24,15 +29,15 @@
     flex: 1 1 314px;
     z-index: 2;
     position: relative;
-    /* padding-top: 60px; */
 }
 
 .Onboarding__Step-Three h3 {
+    margin-top: 15px;
     margin-bottom: 1em;
     padding: 0em 1em 0 1em;
     font-weight: lighter;
     color: white;
-    font-size:48px;
+    font-size: 40px;
 }
 
 .Onboarding__Step-Three .Info-Text span {
@@ -59,6 +64,7 @@
 .Onboarding__Step-Three .Navigation {
     display: flex;
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .Onboarding__Step-Three .Navigation .Nav-Icon {

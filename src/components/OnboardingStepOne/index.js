@@ -16,12 +16,12 @@ const OnboardingStepOne = () => {
             your advisor.<br />
             I’m here to help.</Typography>
             <div className="Info-Text">
-                <img src={layla} className="Layla" alt="Layla" />
+                {/* <img src={layla} className="Layla" alt="Layla" /> */}
                 <Typography use="body">
                     On this app, you can <b>book different pain management services</b> like massage, physiotherapy or chiropracitc, <b>log your symptoms or do physical and meditation excercises.</b>
                     <br /><b>I can assist you, if you need help.</b>
                 </Typography>
-                <Wave fillColor="#69B8E9" />
+                {/* <Wave fillColor="#69B8E9" /> */}
                 <div className="Navigation">
                     <Link to="/StepOne">
                         <Icon className="Nav-Icon Nav-Icon-Circle Nav-Icon--Active" icon="brightness_1" />
