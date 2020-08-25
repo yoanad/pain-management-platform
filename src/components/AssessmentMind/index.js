@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Select, Typography, FormField } from 'rmwc';
+import { Button, Select, Typography } from 'rmwc';
 import layla from '../../assets/Layla.svg';
 import body from '../../assets/body.svg';
 import './Assessment.css'
-import { useHistory, withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const AssessmentStep1 = (props) => {
+const AssessmentMind = (props) => {
     const history = useHistory();
     const [mainProblem, setMainProblem] = useState('');
     const [invalid, setInvalid] = useState(false);
@@ -15,7 +15,7 @@ const AssessmentStep1 = (props) => {
             setInvalid(true);
         }
         else {
-            history.push('/assessment/step2');
+            history.push('/mind');
         }
     }
 
@@ -50,4 +50,4 @@ const AssessmentStep1 = (props) => {
     );
 }
 
-export default AssessmentStep1;
+export default AssessmentMind;

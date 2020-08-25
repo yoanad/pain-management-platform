@@ -48,7 +48,7 @@ const Home = () => {
                     <Icon icon="keyboard_arrow_right" />
                 </div>
             </Link>
-            <Link to="log-symptoms">
+            <Link to="records/add">
                 <div className="NavItem NavItem-Symptoms">
                     <p>
                         I want to log my symptoms.

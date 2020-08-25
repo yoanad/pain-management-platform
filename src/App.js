@@ -13,15 +13,17 @@ import Body from './components/Body';
 import Mind from './components/Mind';
 import Records from './components/Records';
 import RecordsAdd from './components/RecordsAdd';
+import AssessmentMind from './components/AssessmentMind';
 import './App.css';
+import AssessmentBody from './components/AssessmentBody';
 
 const App = () => {
   return (
     <div className="App">
       <Onboarding />
-      <Route path="/assessment" component={Assessment} />
-      <Route path={'/assessment/step1'} component={AssessmentStep1} />
-      <Route path={'/assessment/step2'} component={AssessmentStep2} />
+      <Route exact path="/assessment" component={Assessment} />
+      <Route exact path={'/assessment/step1'} component={AssessmentStep1} />
+      <Route exact path={'/assessment/step2'} component={AssessmentStep2} />
       <Route exact path={'/assessment/calculating'} component={CalculatingScreen} />
       <Route exact path={'/assessment/recommendation'} component={Recommendation} />
       <Route exact path="/home" component={Home} />
@@ -30,6 +32,8 @@ const App = () => {
       <Route exact path="/mind" component={Mind} />
       <Route exact path="/records" component={Records} />
       <Route exact path="/records/add" component={RecordsAdd} />
+      <Route exact path="/assessment-mind" component={AssessmentMind} />
+      <Route exact path="/assessment-body" component={AssessmentBody} />
       <BottomNavigation />
     </div>
   );
