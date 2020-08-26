@@ -24,7 +24,7 @@ const Records = () => {
                     </Elevation>
                 ))}
                 <h1>Symptoms log</h1>
-                {savedRecords.map((el, i) => (
+                {savedRecords && savedRecords.map((el, i) => (
                     <Elevation className="Elevation" z="1" key={i}>
                         <h2>Condition: {el.condition}</h2>
                         <h3><b>Medication: {el.medication} </b> | Dosage: {el.dosage} | Pain intensity:
