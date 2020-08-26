@@ -21,22 +21,22 @@ const OnboardingStepTwo = () => {
                 </Typography>
                 {/* <Wave fillColor="#60c4a0" /> */}
                 <div className="Navigation">
-                    <Link to="/StepOne">
+                    <Link to="/onboarding/StepOne">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_left" />
                     </Link>
-                    <Link to="/StepOne">
+                    <Link to="/onboarding/StepOne">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepTwo">
+                    <Link to="/onboarding/StepTwo">
                         <Icon className="Nav-Icon Nav-Icon-Circle Nav-Icon--Active" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepThree">
+                    <Link to="/onboarding/StepThree">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepFour">
+                    <Link to="/onboarding/StepFour">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepThree">
+                    <Link to="/onboarding/StepThree">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_right" />
                     </Link>
                 </div>

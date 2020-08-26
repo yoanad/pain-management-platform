@@ -1,33 +1,26 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import StepOne from '../OnboardingStepOne';
 import StepTwo from '../OnboardingStepTwo';
 import StepThree from '../OnboardingStepThree';
 import StepFour from '../OnboardingStepFour';
-
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import { useHistory } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import './Onboarding.css';
-import Cookies from 'universal-cookie';
 
 const Onboarding = () => {
-
-    useEffect(() => {
-        const cookies = new Cookies();
-        let d = new Date();
-        d.setTime(d.getTime() + (30 * 60 * 1000));
-        cookies.set("onboarded", true, { path: "/", expires: d });
-    }, []);
+    // const [cookies, setCookie] = useCookies(['onboarded']);
+    // setCookie("onboarded", true, { path: '/' });
+    // const history = useHistory();
+    // history.push("/onboarding/stepOne");
 
     return (
         <div className="Onboarding">
-            <Switch>
-                <Route exact path="/">
-                    <Redirect to="/stepOne" />
-                </Route>
-                <Route exact path="/stepOne" component={StepOne} />
-                <Route exact path="/stepTwo" component={StepTwo} />
-                <Route exact path="/stepThree" component={StepThree} />
-                <Route exact path="/stepFour" component={StepFour} />
-            </Switch>
+            <Redirect to="/onboarding/stepOne"></Redirect>
+            <Route path="/onboarding/stepOne" component={StepOne} />
+            <Route exact path="/onboarding/stepTwo" component={StepTwo} />
+            <Route exact path="/onboarding/stepThree" component={StepThree} />
+            <Route exact path="/onboarding/stepFour" component={StepFour} />
         </div>
     )
 }

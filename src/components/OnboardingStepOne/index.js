@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 import Wave from '../Wave';
 import layla from '../../assets/Layla.svg';
 import './OnboardingStepOne.css';
+import { useCookies } from 'react-cookie';
 
 const OnboardingStepOne = () => {
+    const [cookies, setCookie] = useCookies(['onboarded']);
+    setCookie("onboarded", true, { path: '/' });
 
     return (
         <div className="Onboarding__Step-One">
@@ -23,19 +26,19 @@ const OnboardingStepOne = () => {
                 </Typography>
                 {/* <Wave fillColor="#69B8E9" /> */}
                 <div className="Navigation">
-                    <Link to="/StepOne">
+                    <Link to="/onboarding/stepOne">
                         <Icon className="Nav-Icon Nav-Icon-Circle Nav-Icon--Active" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepTwo">
+                    <Link to="/onboarding/stepTwo">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepThree">
+                    <Link to="/onboarding/stepThree">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepFour">
+                    <Link to="/onboarding/stepFour">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/StepTwo">
+                    <Link to="/onboarding/stepTwo">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_right" />
                     </Link>
                 </div>

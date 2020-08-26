@@ -19,19 +19,19 @@ const OnboardingStepFour = () => {
                     You can conviniently log your symptoms and share them with your treating specialist.
                 </Typography>
                 <div className="Navigation">
-                    <Link to="/stepThree">
+                    <Link to="/onboarding/stepThree">
                         <Icon className="Nav-Icon Nav-Icon-Arrow" icon="keyboard_arrow_left" />
                     </Link>
-                    <Link to="/stepOne">
+                    <Link to="/onboarding/stepOne">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/stepTwo">
+                    <Link to="/onboarding/stepTwo">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/stepThree">
+                    <Link to="/onboarding/stepThree">
                         <Icon className="Nav-Icon Nav-Icon-Circle" icon="brightness_1" />
                     </Link>
-                    <Link to="/stepFour">
+                    <Link to="/onboarding/stepFour">
                         <Icon className="Nav-Icon Nav-Icon-Circle Nav-Icon--Active" icon="brightness_1" />
                     </Link>
                     <Link to="/home">
